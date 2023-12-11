@@ -27,6 +27,7 @@ export default function Header() {
               data.path === pathname && "border-b-summerSky border-b-4"
             )}
             href={data.path}
+            key={data.id}
           >
             {data.title}
           </Link>

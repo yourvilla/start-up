@@ -12,15 +12,15 @@ export default function About() {
         It is a long established fact that a reader will be distracted by the
         readable content of a page when looking at its layout. The point of
         using Lorem Ipsum is that it has a more-or-less normal distribution of
-        letters, as opposed to using 'Content here, content here', making it
+        letters, as opposed to using Content here, content here, making it
         look like readable English. Many desktop publishing packages and web
         page editors now use Lorem Ipsum as their default model text, and a
-        search for 'lorem ipsum' will uncover many web sites still in their
+        search for lorem ipsum will uncover many web sites still in their
         infancy.
       </Text>
       <div className="flex mt-12 w-2/3">
         {aboutData.map((data: { id: string; title: string; image: string,description:string }) => (
-          <div className="w-full shadow-md p-5 mx-12 bg-white rounded-lg">
+          <div className="w-full shadow-md p-5 mx-12 bg-white rounded-lg" key={data.id}>
             <Image src={data.image} width={300} height={300} alt={data.id} className="!h-60"/>
             <Text className="text-center text-summerSky font-semibold">
               {data.title}
